@@ -10,6 +10,7 @@ import 'materialize-css/dist/css/materialize.min.css'
 
 import Home from './components/Home'
 import Navbar from './components/Navbar'
+import Login from './components/Login'
 
 ReactDOM.render(
   <React.StrictMode>
@@ -17,9 +18,7 @@ ReactDOM.render(
     <Router>
 			<Routes>
 				<Route path="/" element={<Home/>} exact/>
-				<Route path="/home" element={<Home/>} exact/>
-				<Route path="/quienes-somos" element={<Home/>} exact/>
-				<Route path="/login" element={<Home/>} exact/>
+				<Route path="/login" element={<Login/>} exact/>
 			</Routes>
 		</Router>
   </React.StrictMode>,
