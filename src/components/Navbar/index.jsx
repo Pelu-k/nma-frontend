@@ -13,11 +13,11 @@ const Navbar = () => {
     <div>
       <nav>
         <div className="nav-wrapper light-blue lighten-1">
-          <a href="#!" className="brand-logo">
+          <a href="/" className="brand-logo">
             Logo
           </a>
           <a
-            href="/"
+            href="#!"
             data-target="mobile-demo"
             className="sidenav-trigger right"
           >
@@ -25,7 +25,7 @@ const Navbar = () => {
           </a>
           <ul className="right hide-on-med-and-down">
             <li>
-              <a href="/home">Home</a>
+              <a href="/">Home</a>
             </li>
             <li>
               <a href="/quienes-somos">¿Quienes Somos?</a>
@@ -39,7 +39,7 @@ const Navbar = () => {
 
       <ul className="sidenav " id="mobile-demo">
         <li>
-          <a href="/home">Home</a>
+          <a href="/">Home</a>
         </li>
         <li>
           <a href="/quienes-somos">¿Quienes Somos?</a>
