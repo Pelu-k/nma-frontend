@@ -29,11 +29,7 @@ const AppRouter = () => {
         {/** rutas profesional */}
         <Route path="profile" element={<Profile />} exact />
         <Route path="professional" element={<Training />} exact />
-        <Route
-          path="professional/create-training"
-          element={<CreateTraining />}
-          exact
-        />
+        <Route path="professional/create-activity" element={<CreateTraining />} exact />
       </>
     ),
   };
