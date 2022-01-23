@@ -1,7 +1,17 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import M from "materialize-css";
 
 const Navbar = () => {
+  const [token, setToken] = useState(false);
+
+  const isToken = () => {
+    return localStorage.getItem("token") === null;
+  };
+
+  useEffect(() => {
+    setToken(isToken);
+  }, []);
+
   useEffect(() => {
     const elem = document.querySelector(".sidenav");
     M.Sidenav.init(elem, {
@@ -28,11 +38,17 @@ const Navbar = () => {
               <a href="/">Home</a>
             </li>
             <li>
-              <a href="/quienes-somos">¿Quienes Somos?</a>
+              <a href="/about-us">¿Quienes Somos?</a>
             </li>
-            <li>
-              <a href="/login">Login</a>
-            </li>
+            {token ? (
+              <li>
+                <a href="/login">Login</a>
+              </li>
+            ) : (
+              <li>
+                <a href="/profile">Perfil</a>
+              </li>
+            )}
           </ul>
         </div>
       </nav>
@@ -42,11 +58,17 @@ const Navbar = () => {
           <a href="/">Home</a>
         </li>
         <li>
-          <a href="/quienes-somos">¿Quienes Somos?</a>
+          <a href="/about-us">¿Quienes Somos?</a>
         </li>
-        <li>
-          <a href="/login">Login</a>
-        </li>
+        {token ? (
+          <li>
+            <a href="/login">Login</a>
+          </li>
+        ) : (
+          <li>
+            <a href="/profile">Perfil</a>
+          </li>
+        )}
       </ul>
     </div>
   );
