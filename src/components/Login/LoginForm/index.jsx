@@ -19,21 +19,23 @@ const LoginForm = () => {
 
   const login = async (e) => {
     e.preventDefault();
-    // Validar campo usuario
     if (!username.trim()) {
       alert("El campo nombre de usuario no puede estar vacio");
       return;
     }
-    // Validar campo contraseña
     if (!password.trim()) {
       alert("La campo contraseña no puede estar vacio");
       return;
     }
 
     try {
+      localStorage.clear();
       const res = await fetch(url, options);
-      const data = await res.json();
-      localStorage.setItem("data", data);
+      const data = await res.json()
+      console.log(data);
+      localStorage.setItem('token', data.token)
+      localStorage.setItem('rol', data.rol)
+      window.location.replace("/professional")
     } catch (error) {
       alert(error.message);
     }
