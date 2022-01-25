@@ -20,16 +20,16 @@ const AppRouter = () => {
   const userRol = {
     2: (
       <>
-        {/** rutas cliente */}
+        {/** rutas profesional */}
         <Route path="profile" element={<Profile />} />
+        <Route path="professional" element={<Training />} exact />
+        <Route path="professional/create-activity" element={<CreateTraining />} exact />
       </>
     ),
     3: (
       <>
-        {/** rutas profesional */}
+        {/** rutas cliente */}
         <Route path="profile" element={<Profile />} exact />
-        <Route path="professional" element={<Training />} exact />
-        <Route path="professional/create-activity" element={<CreateTraining />} exact />
       </>
     ),
   };
