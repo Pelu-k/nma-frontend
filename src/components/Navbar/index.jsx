@@ -8,6 +8,11 @@ const Navbar = () => {
     return localStorage.getItem("token") === null;
   };
 
+  const logout = () => {
+    localStorage.clear();
+    window.location.href = "/";
+  };
+
   useEffect(() => {
     setToken(isToken);
   }, []);
@@ -21,8 +26,8 @@ const Navbar = () => {
 
   return (
     <div>
-      <nav>
-        <div className="nav-wrapper light-blue lighten-1">
+      <nav className="light-blue lighten-1">
+        <div className="nav-wrapper light-blue lighten-1 container">
           <a href="/" className="brand-logo">
             Logo
           </a>
@@ -35,19 +40,36 @@ const Navbar = () => {
           </a>
           <ul className="right hide-on-med-and-down">
             <li>
-              <a href="/">Home</a>
+              <a href="/">
+                <i className="material-icons left">home</i>
+                Home
+              </a>
             </li>
             <li>
-              <a href="/about-us">¿Quienes Somos?</a>
+              <a href="/about-us">
+                <i className="material-icons left">apartment</i>
+                ¿Quienes Somos?
+              </a>
             </li>
             {token ? (
               <li>
-                <a href="/login">Login</a>
+                <a href="/login">
+                  <i className="material-icons left">login</i>
+                  Login
+                </a>
               </li>
             ) : (
-              <li>
-                <a href="/profile">Perfil</a>
-              </li>
+              <>
+                <li>
+                  <a href="/profile">Perfil</a>
+                </li>
+                <li>
+                  <a href="#!" onClick={logout}>
+                    Logout
+                    <i className="material-icons left">logout</i>
+                  </a>
+                </li>
+              </>
             )}
           </ul>
         </div>
@@ -55,7 +77,10 @@ const Navbar = () => {
 
       <ul className="sidenav " id="mobile-demo">
         <li>
-          <a href="/">Home</a>
+          <a href="/">
+            Home
+            <i className="material-icons left">home</i>
+          </a>
         </li>
         <li>
           <a href="/about-us">¿Quienes Somos?</a>
@@ -65,9 +90,17 @@ const Navbar = () => {
             <a href="/login">Login</a>
           </li>
         ) : (
-          <li>
-            <a href="/profile">Perfil</a>
-          </li>
+          <>
+            <li>
+              <a href="/profile">Perfil</a>
+            </li>
+            <li>
+              <a href="#!">
+                Logout
+                <i className="material-icons left">logout</i>
+              </a>
+            </li>
+          </>
         )}
       </ul>
     </div>
