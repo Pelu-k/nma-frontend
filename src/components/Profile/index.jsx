@@ -10,8 +10,8 @@ const Profile = () => {
   }, [])
 
   const profile = {
-    2: <ClientProfile />,
-    3: <ProfessionalProfile />,
+    2: <ProfessionalProfile />,
+    3: <ClientProfile />,
   };
 
   return <div>{profile[rol]}</div>;
