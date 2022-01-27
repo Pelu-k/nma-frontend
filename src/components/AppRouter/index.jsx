@@ -4,8 +4,8 @@ import Error404 from "../404";
 import AboutUs from "../AboutUs";
 import Home from "../Home";
 import Login from "../Login";
-import Training from "../Professional/Training";
-import CreateTraining from "../Professional/Training/CreateTraining";
+import Professional from "../Professional";
+import CreateAdvisory from "../Professional/Advisory/CreateAdvisory";
 import Profile from "../Profile";
 
 const AppRouter = () => {
@@ -22,8 +22,8 @@ const AppRouter = () => {
       <>
         {/** rutas profesional */}
         <Route path="profile" element={<Profile />} />
-        <Route path="professional" element={<Training />} exact />
-        <Route path="professional/create-activity" element={<CreateTraining />} exact />
+        <Route path="professional" element={<Professional />} exact />
+        <Route path="professional/create-advisory" element={<CreateAdvisory />} exact />
       </>
     ),
     3: (
