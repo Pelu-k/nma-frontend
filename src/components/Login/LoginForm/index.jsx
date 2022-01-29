@@ -36,7 +36,7 @@ const LoginForm = () => {
       localStorage.setItem('token', data.token)
       localStorage.setItem('rol', data.rol)
       localStorage.setItem('idProfesional', data.idProfesional)
-      window.location.replace("/professional")
+      window.location.replace("/profile")
     } catch (error) {
       alert(error.message);
     }

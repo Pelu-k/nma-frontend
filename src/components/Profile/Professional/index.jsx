@@ -1,30 +1,22 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
+import Card from "../../Utils/Card";
 
 const ProfessionalProfile = () => {
-  // const [professionalData, setProfessionalData] = useState({});
-
-  // const url = "http://localhost:8080/api/profesional/profile";
-  // const options = {
-  //   method: 'GET',
-  //   Headers: {
-  //     Authorization: localStorage.getItem('token'),
-  //     Accept: 'application/json',
-  //     'Content-type': 'application/json'
-  //   }
-  // };
-
-  // const getProfessionalData = async (e) => {
-  //   const res = await fetch(url, options);
-  //   const data = await res.json();
-  //   setProfessionalData(data);
-  // };
-
-  // useEffect(getProfessionalData);
-
   return (
     <div className="container">
-      <h2>Perfil profesional</h2>
-      <a href="professional" className="btn">Profesional</a>
+      <h2 className="center">Perfil profesional</h2>
+      <div className="row">
+        <Card
+          url="/professional"
+          accion="Asesoria"
+          text="Seccion para crear, ver y/o cancelar asesorias."
+        />
+        <Card
+          url="#!"
+          accion="Actividad"
+          text="Seccion para agregar, ver, cancelar y/o actualizar actividades asosiadas a una asesoria."
+        />
+      </div>
     </div>
   );
 };

@@ -38,7 +38,7 @@ const UpdateAdvisory = () => {
       ) : (
         <div className="container">
           <div>
-            <h2 className="center">Actializar asesoria</h2>
+            <h2 className="center">Asesoria</h2>
           </div>
           <Badges asesorias={asesorias} />
         </div>

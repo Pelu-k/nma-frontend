@@ -4,7 +4,7 @@ import M from "materialize-css";
 const Badges = ({ asesorias }) => {
   const cancelarAsesoria = async (idAsesoria) => {
     try {
-      const res = await fetch("http://localhost:8080/api/update-advisory", {
+      await fetch("http://localhost:8080/api/update-advisory", {
         method: "PUT",
         headers: {
           Accept: "application/json",
@@ -16,7 +16,8 @@ const Badges = ({ asesorias }) => {
           estado: "Cancelada",
         }),
       });
-      alert(res);
+      alert("Aseseria cancelada");
+      window.location.reload()
     } catch (error) {
       alert(error);
     }

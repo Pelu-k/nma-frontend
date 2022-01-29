@@ -89,7 +89,7 @@ const CreateAdvisory = () => {
                 </button>
               </div>
               <div>
-                <a href="#!" className="btn">
+                <a href="/professional" className="btn">
                   <i className="material-icons left">arrow_back</i>
                   Volver
                 </a>
