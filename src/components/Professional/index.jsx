@@ -1,4 +1,5 @@
 import React from "react";
+import Card from "../Utils/Card";
 
 const Professional = () => {
   return (
@@ -7,11 +8,16 @@ const Professional = () => {
         <h1 className="center">Opciones</h1>
       </div>
       <div className="row">
-        <div className="col s12">
-          <a href="/professional/create-advisory" className="btn">
-            Crear capacitacion
-          </a>
-        </div>
+        <Card
+          accion="Crear asesoria"
+          url="/professional/create-advisory"
+          text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque dolores similique deserunt quam eum corporis!"
+        />
+        <Card
+          accion="Actualizar asesoria"
+          url="/professional/update-advisory"
+          text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque dolores similique deserunt quam eum corporis!"
+        />
       </div>
     </div>
   );
