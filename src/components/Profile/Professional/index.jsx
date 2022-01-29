@@ -7,12 +7,12 @@ const ProfessionalProfile = () => {
       <h2 className="center">Perfil profesional</h2>
       <div className="row">
         <Card
-          url="/professional"
+          url="/advisory"
           accion="Asesoria"
           text="Seccion para crear, ver y/o cancelar asesorias."
         />
         <Card
-          url="#!"
+          url="/activity"
           accion="Actividad"
           text="Seccion para agregar, ver, cancelar y/o actualizar actividades asosiadas a una asesoria."
         />
