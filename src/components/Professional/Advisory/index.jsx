@@ -1,7 +1,7 @@
 import React from "react";
-import Card from "../Utils/Card";
+import Card from "../../Utils/Card";
 
-const Professional = () => {
+const Advisory = () => {
   return (
     <div className="container">
       <div>
@@ -10,12 +10,12 @@ const Professional = () => {
       <div className="row">
         <Card
           accion="Crear asesoria"
-          url="/professional/create-advisory"
+          url="/advisory/create-advisory"
           text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque dolores similique deserunt quam eum corporis!"
         />
         <Card
           accion="Actualizar asesoria"
-          url="/professional/update-advisory"
+          url="/advisory/update-advisory"
           text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque dolores similique deserunt quam eum corporis!"
         />
       </div>
@@ -23,4 +23,4 @@ const Professional = () => {
   );
 };
 
-export default Professional;
+export default Advisory;

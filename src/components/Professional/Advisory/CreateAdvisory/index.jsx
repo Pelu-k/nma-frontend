@@ -12,7 +12,7 @@ const CreateAdvisory = () => {
   const [estado, setEstado] = useState(true);
 
   const obtenerClientes = async () => {
-    const res = await fetch("http://localhost:8080/api/clients", {
+    const res = await fetch("http://localhost:8080/api/customers", {
       method: "GET",
       headers: {
         Accept: "application/json",
