@@ -4,7 +4,12 @@ import Error404 from "../404";
 import AboutUs from "../AboutUs";
 import Home from "../Home";
 import Login from "../Login";
-import Professional from "../Professional";
+import Activity from "../Professional/Activity";
+import CreateActivity from "../Professional/Activity/CreateActivity";
+import DeleteActivity from "../Professional/Activity/DeleteActivity";
+import ReadActivity from "../Professional/Activity/ReadActivity";
+import UpdateActivity from "../Professional/Activity/UpdateActivity";
+import Advisory from "../Professional/Advisory";
 import CreateAdvisory from "../Professional/Advisory/CreateAdvisory";
 import UpdateAdvisory from "../Professional/Advisory/UpdateAdvisory";
 import Profile from "../Profile";
@@ -22,10 +27,15 @@ const AppRouter = () => {
     2: (
       <>
         {/** rutas profesional */}
-        <Route path="profile" element={<Profile />} />
-        <Route path="professional" element={<Professional />} exact />
-        <Route path="professional/create-advisory" element={<CreateAdvisory />} exact />
-        <Route path="professional/update-advisory" element={<UpdateAdvisory />} exact />
+        <Route path="profile"                  element={<Profile />}        exact/>
+        <Route path="advisory"                 element={<Advisory />}       exact />
+        <Route path="advisory/create-advisory" element={<CreateAdvisory />} exact />
+        <Route path="advisory/update-advisory" element={<UpdateAdvisory />} exact />
+        <Route path="activity"                 element={<Activity />}       exact />
+        <Route path="activity/create-activity" element={<CreateActivity />} exact />
+        <Route path="activity/read-activity"   element={<ReadActivity />}   exact />
+        <Route path="activity/update-activity" element={<UpdateActivity />} exact />
+        <Route path="activity/delete-activity" element={<DeleteActivity />} exact />
       </>
     ),
     3: (
