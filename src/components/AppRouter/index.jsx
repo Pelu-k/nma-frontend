@@ -6,6 +6,7 @@ import Home from "../Home";
 import Login from "../Login";
 import Professional from "../Professional";
 import CreateAdvisory from "../Professional/Advisory/CreateAdvisory";
+import UpdateAdvisory from "../Professional/Advisory/UpdateAdvisory";
 import Profile from "../Profile";
 
 const AppRouter = () => {
@@ -24,6 +25,7 @@ const AppRouter = () => {
         <Route path="profile" element={<Profile />} />
         <Route path="professional" element={<Professional />} exact />
         <Route path="professional/create-advisory" element={<CreateAdvisory />} exact />
+        <Route path="professional/update-advisory" element={<UpdateAdvisory />} exact />
       </>
     ),
     3: (
