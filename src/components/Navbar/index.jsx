@@ -95,7 +95,7 @@ const Navbar = () => {
               <a href="/profile">Perfil</a>
             </li>
             <li>
-              <a href="#!">
+              <a href="#!" onClick={logout}>
                 Logout
                 <i className="material-icons left">logout</i>
               </a>
