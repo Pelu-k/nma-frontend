@@ -10,7 +10,7 @@ const DatePicker = ({ label, id }) => {
   return (
     <div className="col s12 m4">
       <label htmlFor={id}>{label}</label>
-      <input placeholder={label} type="text" className="datepicker" id={id} />
+      <input type="text" className="datepicker" id={id} />
     </div>
   );
 };

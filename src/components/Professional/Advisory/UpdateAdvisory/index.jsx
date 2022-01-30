@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Badges from "../../../Utils/Badges";
+import BadgesCollapsibles from "../../../Utils/BadgesCollapsibles";
 import Loading from "../../../Utils/Loading";
 
 const UpdateAdvisory = () => {
@@ -23,7 +23,7 @@ const UpdateAdvisory = () => {
     setEstado(true);
     setTimeout(() => {
       setEstado(false);
-    }, 3000);
+    }, 4000);
   };
 
   useEffect(() => {
@@ -38,9 +38,9 @@ const UpdateAdvisory = () => {
       ) : (
         <div className="container">
           <div>
-            <h2 className="center">Asesoria</h2>
+            <h2 className="center">Asesorias</h2>
           </div>
-          <Badges asesorias={asesorias} />
+          <BadgesCollapsibles asesorias={asesorias} />
         </div>
       )}
     </>
