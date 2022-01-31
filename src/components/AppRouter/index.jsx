@@ -8,6 +8,7 @@ import Activity from "../Professional/Activity";
 import CreateActivity from "../Professional/Activity/CreateActivity";
 import AddActivity from "../Professional/Activity/CreateActivity/AddActivity";
 import DeleteActivity from "../Professional/Activity/DeleteActivity";
+import RemoveActivity from "../Professional/Activity/DeleteActivity/RemoveActivity";
 import ReadActivity from "../Professional/Activity/ReadActivity";
 import SeeActivity from "../Professional/Activity/ReadActivity/SeeActivity";
 import UpdateActivity from "../Professional/Activity/UpdateActivity";
@@ -39,7 +40,9 @@ const AppRouter = () => {
         <Route path="activity/read-activity"       element={<ReadActivity />}   exact />
         <Route path="activity/read-activity/:id"   element={<SeeActivity />}    exact />
         <Route path="activity/update-activity"     element={<UpdateActivity />} exact />
+        <Route path="activity/update-activity/:id" element={<UpdateActivity />} exact />
         <Route path="activity/delete-activity"     element={<DeleteActivity />} exact />
+        <Route path="activity/delete-activity/:id" element={<RemoveActivity />} exact />
       </>
     ),
     3: (
