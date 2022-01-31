@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 
 const ClientProfile = () => {
+
   return (
-    <div>
-      <h2 className="center">Perfil cliente</h2>
+    <div className="container">
+      <div className="row">
+        <h2 className="center col s12">Perfil cliente</h2>
+      </div>
     </div>
   );
 };
