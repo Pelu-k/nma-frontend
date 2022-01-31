@@ -43,7 +43,7 @@ const CreateActivity = () => {
           <div>
             <h2 className="center">Lista de asesorias</h2>
           </div>
-          <Badges asesorias={asesorias}/>
+          <Badges data={asesorias} url="/activity/create-activity" icon="add_circle"/>
         </div>
       )}
     </>

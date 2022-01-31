@@ -1,13 +1,13 @@
 import React from "react";
 
-const Badges = ({ asesorias }) => {
+const Badges = ({ data, url, icon }) => {
   return (
     <div className="row">
       <div className="collection">
-        {asesorias.map((asesoria) => (
-          <a href={`/activity/create-activity/${asesoria.id}`} className="collection-item">
-            <i className="material-icons right">add_circle</i>
-            {asesoria.nombre}
+        {data.map((d) => (
+          <a href={`${url}/${d.id}`} className="collection-item">
+            <i className="material-icons right">{icon}</i>
+            {d.nombre}
           </a>
         ))}
       </div>
