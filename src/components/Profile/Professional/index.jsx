@@ -1,11 +1,13 @@
 import React from "react";
 import Card from "../../Utils/Card";
+import Collection from "../../Utils/Collection";
 
 const ProfessionalProfile = () => {
   return (
     <div className="container">
       <h2 className="center">Perfil profesional</h2>
       <div className="row">
+        {/* <Collection/> */}
         <Card
           url="/advisory"
           accion="Asesoria"

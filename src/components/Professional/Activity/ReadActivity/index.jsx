@@ -6,9 +6,9 @@ const ReadActivity = () => {
   const [asesorias, setAsesorias] = useState();
   const [estado, setEstado] = useState(true);
 
-  const obtenerAsesorias = async (idProfesional) => {
+  const obtenerAsesorias = async (idUsuario) => {
     const res = await fetch(
-      `http://localhost:8080/api/advisory/${idProfesional}`,
+      `http://localhost:8080/api/advisory/${idUsuario}`,
       {
         method: "GET",
         headers: {
@@ -30,7 +30,7 @@ const ReadActivity = () => {
   };
 
   useEffect(() => {
-    obtenerAsesorias(localStorage.getItem("idProfesional"));
+    obtenerAsesorias(localStorage.getItem("idUsuario"));
     cambiarEstado();
   }, []);
 

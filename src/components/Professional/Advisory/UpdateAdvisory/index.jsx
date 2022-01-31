@@ -6,8 +6,8 @@ const UpdateAdvisory = () => {
   const [estado, setEstado] = useState(true);
   const [asesorias, setAsesorias] = useState();
 
-  const obtenerAsesorias = async (idProfesional) => {
-    const res = await fetch(`http://localhost:8080/api/advisory/${idProfesional}`, {
+  const obtenerAsesorias = async (idUsuario) => {
+    const res = await fetch(`http://localhost:8080/api/advisory/${idUsuario}`, {
       method: "GET",
       headers: {
         Accept: "application/json",
@@ -27,7 +27,7 @@ const UpdateAdvisory = () => {
   };
 
   useEffect(() => {
-    obtenerAsesorias(localStorage.getItem("idProfesional"));
+    obtenerAsesorias(localStorage.getItem("idUsuario"));
     cambiarEstado();
   }, []);
 

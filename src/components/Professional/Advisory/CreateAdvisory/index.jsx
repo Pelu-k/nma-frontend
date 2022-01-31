@@ -48,7 +48,7 @@ const CreateAdvisory = () => {
         fechaTermino: new Date(document.getElementById("fechaTermino").value),
         valor: document.getElementById("valor").value,
         idClienteFk: document.getElementById("cliente").value,
-        idProfesionalFk: localStorage.getItem("idProfesional"),
+        idUsuarioFk: localStorage.getItem("idUsuario"),
       }),
     });
     alert(res);

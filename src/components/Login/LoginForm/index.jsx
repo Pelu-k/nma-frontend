@@ -35,7 +35,7 @@ const LoginForm = () => {
       console.log(data);
       localStorage.setItem('token', data.token)
       localStorage.setItem('rol', data.rol)
-      localStorage.setItem('idProfesional', data.idProfesional)
+      localStorage.setItem('idUsuario', data.idUsuario)
       window.location.replace("/profile")
     } catch (error) {
       alert(error.message);
